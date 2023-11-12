@@ -80,7 +80,7 @@ def predict(customer_reference):
     )
 
 if __name__ == '__main__':
-    #app.run()
-    server = wsgiserver.WSGIServer(app, host='127.0.0.1', port=5001)
-    server.start()
+    app.run()
+    #server = wsgiserver.WSGIServer(app, host='127.0.0.1', port=5001)
+    #server.start()
 					 
