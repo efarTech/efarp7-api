@@ -45,7 +45,7 @@ def predict_form():
         predicted_proba = 'Customer not found'
 
     df_scoring = scoringController.get_scoring()
-    model = modelController.get_model()
+    model = modelController.get_model().astype(LGBMClassifier)
 
     if str(customer_reference) in customers_references:
         df_customer = df_scoring[df_scoring.index == customer_reference]
