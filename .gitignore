@@ -1,3 +1,13 @@
 
 .DS_Store
 logs.log
+__pycache__/app.cpython-310.pyc
+__pycache__/config.cpython-310.pyc
+controllers/__pycache__/__init__.cpython-310.pyc
+controllers/__pycache__/EfarCustomerController.cpython-310.pyc
+controllers/__pycache__/EfarModelController.cpython-310.pyc
+controllers/__pycache__/EfarScoringController.cpython-310.pyc
+modules/__pycache__/__init__.cpython-310.pyc
+modules/file/__pycache__/EfarDataFile.cpython-310.pyc
+repositories/__pycache__/__init__.cpython-310.pyc
+repositories/__pycache__/EfarRepository.cpython-310.pyc
