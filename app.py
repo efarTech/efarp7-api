@@ -11,6 +11,7 @@ import warnings
 import wsgiserver
 import logging
 
+from lightgbm import LGBMClassifier
 from flask import Flask, jsonify, request, render_template
 from controllers.EfarModelController import EfarModelController
 from controllers.EfarScoringController import EfarScoringController
