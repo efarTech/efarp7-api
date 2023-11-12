@@ -11,6 +11,7 @@ import warnings
 import wsgiserver
 import logging
 
+from sklearn.pipeline import Pipeline
 from lightgbm import LGBMClassifier
 from flask import Flask, jsonify, request, render_template
 from controllers.EfarModelController import EfarModelController
