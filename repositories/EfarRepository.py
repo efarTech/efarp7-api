@@ -12,6 +12,7 @@ import numpy as np
 import warnings
 import dill
 import logging
+import pickle5 as pickle
 
 from modules.file.EfarDataFile import EfarDataFile
 
@@ -30,7 +31,9 @@ class EfarRepository:
         df_scoring = self.efardatafile.to_data('data_api', 'scr')
         df_scoring = df_scoring.set_index('SK_ID_CURR')
         customers_references = df_scoring.index.unique()
-        lightgbm_model = self.efardatafile.to_data('lightgbm_drill', 'scr')
+        
+        with open(f'{directory}/lightgbm.pickle') as f:
+            lightgbm_model = pickle.load(f)
         
         return df_scoring, customers_references, lightgbm_model
     
