@@ -1,0 +1,8 @@
+dill==0.3.7
+Flask==2.2.5
+joblib==1.3.2
+numpy==1.24.1
+pandas==1.5.3
+pycaret==3.0.0
+gunicorn==21.2.0
+wsgiserver==1.3.0
