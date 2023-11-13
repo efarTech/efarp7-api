@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 
 import warnings
-import dill
+import joblib
 import logging
 import pickle5 as pickle
 
@@ -32,8 +32,10 @@ class EfarRepository:
         df_scoring = df_scoring.set_index('SK_ID_CURR')
         customers_references = df_scoring.index.unique()
         
-        with open(f'{directory}/lightgbm.pickle') as f:
-            lightgbm_model = pickle.load(f)
+        #with open(f'{directory}/lightgbm.pickle') as f:
+        #    lightgbm_model = pickle.load(f)
+        
+        lightgbm_model = joblib.load(f'{directory}/lightgbm_model.joblib')
         
         return df_scoring, customers_references, lightgbm_model
     
