@@ -9,22 +9,22 @@ from datetime import datetime, date
 import pandas as pd
 import numpy as np
 
+import joblib
 import warnings
+import dill
 import logging
 
 from flask import Flask
-from repositories.EfarRepository import EfarRepository
 
 class EfarModelController:
     """
     Efardb class
     """
-    def __init__(self, directory):
+    def __init__(self, repository):
         """
         __init__ method
         """
-        self.repository = EfarRepository(directory)
-        self.lightgbm_model = self.repository.get_model()
+        self.lightgbm_model = repository.get_model()
     
     def get_model(self):
         """
